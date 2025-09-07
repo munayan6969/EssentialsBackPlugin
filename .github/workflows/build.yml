@@ -3,6 +3,8 @@ name: Build Plugin
 on:
   push:
     branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
 jobs:
   build:
@@ -21,8 +23,7 @@ jobs:
       - name: Build with Maven
         run: mvn -B package --file pom.xml
 
-      - name: Upload built jar
+      - name: Upload plugin JAR
         uses: actions/upload-artifact@v4
         with:
           name: EssentialsBackPlugin
-          path: target/*.jar
