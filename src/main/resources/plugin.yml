@@ -1,0 +1,11 @@
+name: EssentialsBackPlugin
+version: 1.0.0
+main: com.example.backplugin.BackPlugin
+api-version: 1.21
+author: munayan6969
+description: A simple /back command plugin for Paper 1.21.8
+
+commands:
+  back:
+    description: Teleport to your last location (death or teleport).
+    usage: /back
